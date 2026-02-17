@@ -4,8 +4,8 @@
     "host": "0.0.0.0"
   },
   "paths": {
-    "commandFile": "H:\\Games\\Grand Theft Auto V\\comando_gta.json",
-    "queueFile": "H:\\Games\\Grand Theft Auto V\\cola_espera.json"
+    "commandFile": "./comando_gta.json",
+    "queueFile": "./cola_espera.json"
   },
   "security": {
     "rateLimitMs": 500,
@@ -16,6 +16,6 @@
     "priorityQueue": true,
     "autoCleanup": true,
     "fadeEffects": true,
-    "debugMode": false
+    "debugMode": true
   }
 }

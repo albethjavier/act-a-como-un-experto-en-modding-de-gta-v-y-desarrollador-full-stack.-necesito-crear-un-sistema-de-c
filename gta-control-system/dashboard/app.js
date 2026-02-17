@@ -353,6 +353,11 @@ app.get('/', (req, res) => {
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
         button:before {
             content: '';
@@ -430,22 +435,37 @@ app.get('/', (req, res) => {
             setTimeout(() => toast.classList.remove('show'), 2000);
         }
         
-        function ejecutarComando(id, nombre) {
+        function ejecutarComando(id, nombre, event) {
+            // Efecto visual en el botón
+            const btn = event.target.closest('button');
+            btn.disabled = true;
+            btn.style.transform = 'scale(0.95)';
+            
             fetch('/ejecutar/' + id)
                 .then(res => {
                     if (res.ok) {
                         showToast('✅ ' + nombre);
                         document.getElementById('status').textContent = '🟢 Ejecutando...';
+                        btn.style.background = 'linear-gradient(135deg, #0f0 0%, #0a0 100%)';
+                        btn.style.color = '#000';
                         setTimeout(() => {
                             document.getElementById('status').textContent = '🟢 Conectado';
+                            btn.disabled = false;
+                            btn.style.transform = '';
+                            btn.style.background = '';
+                            btn.style.color = '';
                         }, 1000);
                     } else {
                         showToast('❌ Error: ' + res.status);
+                        btn.disabled = false;
+                        btn.style.transform = '';
                     }
                 })
                 .catch(err => {
                     showToast('❌ Error de conexión');
                     document.getElementById('status').textContent = '🔴 Desconectado';
+                    btn.disabled = false;
+                    btn.style.transform = '';
                 });
         }
         
@@ -458,7 +478,7 @@ app.get('/', (req, res) => {
             
             let html = '<h3>' + seccion.cat + '</h3><div class="grid">';
             seccion.cmds.forEach(cmd => {
-                html += '<button onclick="ejecutarComando(\'' + cmd.id + '\', \'' + cmd.n + '\')" title="' + cmd.desc + '"><span>' + cmd.n + '</span></button>';
+                html += '<button onclick="ejecutarComando(\'' + cmd.id + '\', \'' + cmd.n + '\', event)" title="' + cmd.desc + '"><span>' + cmd.n + '</span></button>';
             });
             html += '</div>';
             
