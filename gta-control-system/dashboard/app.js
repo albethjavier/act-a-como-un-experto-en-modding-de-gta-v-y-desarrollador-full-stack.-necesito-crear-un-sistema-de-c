@@ -426,7 +426,7 @@ app.get('/', (req, res) => {
     <div class="toast" id="toast"></div>
     
     <script>
-        const secciones = ${JSON.stringify(secciones)};
+        const secciones = JSON.parse("${JSON.stringify(secciones).replace(/"/g, '\\"').replace(/\\n/g, '\\n')}");
         
         function showToast(message) {
             const toast = document.getElementById('toast');

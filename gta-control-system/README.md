@@ -83,10 +83,17 @@ npm install
 2. **Abrir GTA V** (modo historia)
 
 3. **Cargar el script en GTA V**:
+   
+   **Opción A - Usando C# (Recomendado)**: (más estable)
    - Presiona `F4` para abrir la consola de ScriptHookVDotNet
    - Escribe: `load escucha_dashboard`
    - Presiona Enter
    - Deberías ver: `[INFO] Script 'escucha_dashboard' loaded successfully`
+   
+   **Opción B - Usando Python**:
+   - Los scripts .py se cargan automáticamente desde la carpeta `scripts/`
+   - Asegúrate de que IronPython esté instalado correctamente
+   - NO uses el comando `load` para archivos .py
 
 4. **Abrir el dashboard**:
    ```
