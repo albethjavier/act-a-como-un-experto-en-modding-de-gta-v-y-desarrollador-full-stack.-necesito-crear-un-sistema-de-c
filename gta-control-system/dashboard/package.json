@@ -1,0 +1,30 @@
+{
+  "name": "gta-v-dashboard",
+  "version": "7.0.0",
+  "description": "Dashboard de control remoto para GTA V con integración TikTok",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "gta-v",
+    "streaming",
+    "tiktok",
+    "remote-control"
+  ],
+  "author": "GTA Control System",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

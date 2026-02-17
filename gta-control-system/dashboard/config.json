@@ -1,0 +1,21 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "0.0.0.0"
+  },
+  "paths": {
+    "commandFile": "H:\\Games\\Grand Theft Auto V\\comando_gta.json",
+    "queueFile": "H:\\Games\\Grand Theft Auto V\\cola_espera.json"
+  },
+  "security": {
+    "rateLimitMs": 500,
+    "maxCommandsPerMinute": 60,
+    "enableCors": true
+  },
+  "features": {
+    "priorityQueue": true,
+    "autoCleanup": true,
+    "fadeEffects": true,
+    "debugMode": false
+  }
+}

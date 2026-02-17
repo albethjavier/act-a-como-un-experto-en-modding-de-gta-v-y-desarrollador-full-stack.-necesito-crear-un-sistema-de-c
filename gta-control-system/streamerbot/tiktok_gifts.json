@@ -1,0 +1,222 @@
+{
+  "version": "1.0",
+  "region": "VE",
+  "description": "Mapeo de regalos de TikTok a comandos de GTA V (Venezuela)",
+  "source": "https://streamtoearn.io/gifts?region=VE",
+  "gifts": [
+    {
+      "name": "Rosa",
+      "coins": 1,
+      "priority": 1,
+      "commands": ["curar"],
+      "description": "Curación básica"
+    },
+    {
+      "name": "Corazón",
+      "coins": 10,
+      "priority": 1,
+      "commands": ["blindaje"],
+      "description": "Armadura completa"
+    },
+    {
+      "name": "Dedo Arriba",
+      "coins": 5,
+      "priority": 1,
+      "commands": ["fix_veh"],
+      "description": "Reparar vehículo"
+    },
+    {
+      "name": "Helado",
+      "coins": 30,
+      "priority": 2,
+      "commands": ["cl_rnd"],
+      "description": "Clima aleatorio"
+    },
+    {
+      "name": "Donut",
+      "coins": 30,
+      "priority": 2,
+      "commands": ["t_dia"],
+      "description": "Cambiar a mediodía"
+    },
+    {
+      "name": "Arcoíris",
+      "coins": 50,
+      "priority": 2,
+      "commands": ["cl_clear"],
+      "description": "Clima despejado"
+    },
+    {
+      "name": "Diamante",
+      "coins": 100,
+      "priority": 3,
+      "commands": ["veh_t20"],
+      "description": "Superdeportivo T20"
+    },
+    {
+      "name": "Corona",
+      "coins": 100,
+      "priority": 3,
+      "commands": ["veh_zentorno"],
+      "description": "Lamborghini Zentorno"
+    },
+    {
+      "name": "Trofeo",
+      "coins": 100,
+      "priority": 3,
+      "commands": ["veh_adder"],
+      "description": "Bugatti Adder"
+    },
+    {
+      "name": "Castillo",
+      "coins": 500,
+      "priority": 4,
+      "commands": ["atk_zombies_10"],
+      "description": "Ataque de 10 zombies"
+    },
+    {
+      "name": "Cohete",
+      "coins": 500,
+      "priority": 4,
+      "commands": ["atk_police_15"],
+      "description": "Asalto policial"
+    },
+    {
+      "name": "Ferrari",
+      "coins": 500,
+      "priority": 4,
+      "commands": ["veh_rhino"],
+      "description": "Tanque militar"
+    },
+    {
+      "name": "Yate",
+      "coins": 1000,
+      "priority": 5,
+      "commands": ["atk_marines"],
+      "description": "Ataque de marines"
+    },
+    {
+      "name": "Avión",
+      "coins": 1000,
+      "priority": 5,
+      "commands": ["veh_hydra"],
+      "description": "Jet militar Hydra"
+    },
+    {
+      "name": "Mansión",
+      "coins": 1000,
+      "priority": 5,
+      "commands": ["atk_aliens"],
+      "description": "Invasión alienígena"
+    },
+    {
+      "name": "Planeta",
+      "coins": 5000,
+      "priority": 6,
+      "commands": ["atk_juggernaut"],
+      "description": "Juggernaut con minigun"
+    },
+    {
+      "name": "Galaxia",
+      "coins": 5000,
+      "priority": 6,
+      "commands": ["w_5"],
+      "description": "5 estrellas de policía"
+    },
+    {
+      "name": "Universo",
+      "coins": 10000,
+      "priority": 6,
+      "commands": ["limpiar_todo"],
+      "description": "Limpiar todo el mapa"
+    },
+    {
+      "name": "León",
+      "coins": 40000,
+      "priority": 10,
+      "commands": [
+        "atk_juggernaut",
+        "inv_on",
+        "armas",
+        "veh_khanjali"
+      ],
+      "description": "Combo legendario: Juggernaut + Modo Dios + Armas + Tanque"
+    },
+    {
+      "name": "Dragón",
+      "coins": 40000,
+      "priority": 10,
+      "commands": [
+        "w_5",
+        "atk_marines",
+        "atk_police_15"
+      ],
+      "description": "Combo épico: Caos policial total"
+    },
+    {
+      "name": "Fénix",
+      "coins": 40000,
+      "priority": 10,
+      "commands": [
+        "limpiar_todo",
+        "curar",
+        "inv_on",
+        "veh_hydra"
+      ],
+      "description": "Combo renacimiento: Reset + Poder + Jet"
+    }
+  ],
+  "notes": {
+    "delays": "Para combos con múltiples comandos, agregar delay de 2000ms entre cada uno",
+    "priority": "Mayor prioridad = ejecuta primero en la cola",
+    "customization": "Puedes modificar los comandos según tus preferencias"
+  },
+  "examples": {
+    "simple_gift": {
+      "gift": "Rosa",
+      "action": "GTA_Ejecutar_Comando",
+      "arguments": {
+        "accion": "curar",
+        "prioridad": 1,
+        "usuario": "%user%",
+        "regalo": "Rosa"
+      }
+    },
+    "combo_gift": {
+      "gift": "León",
+      "actions": [
+        {
+          "action": "GTA_Ejecutar_Comando",
+          "arguments": {
+            "accion": "atk_juggernaut",
+            "prioridad": 10
+          },
+          "delay": 2000
+        },
+        {
+          "action": "GTA_Ejecutar_Comando",
+          "arguments": {
+            "accion": "inv_on",
+            "prioridad": 10
+          },
+          "delay": 2000
+        },
+        {
+          "action": "GTA_Ejecutar_Comando",
+          "arguments": {
+            "accion": "armas",
+            "prioridad": 10
+          },
+          "delay": 2000
+        },
+        {
+          "action": "GTA_Ejecutar_Comando",
+          "arguments": {
+            "accion": "veh_khanjali",
+            "prioridad": 10
+          }
+        }
+      ]
+    }
+  }
+}

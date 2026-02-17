@@ -1,0 +1,60 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.npm
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# GTA V specific files (no subir archivos del juego)
+comando_gta.json
+cola_espera.json
+*.shvdn
+ScriptHookV*.dll
+ScriptHookV*.asi
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Build outputs
+dist/
+build/
+*.exe
+*.msi
+
+# Test files
+test/
+tests/
+*.test.js
+*.spec.js
