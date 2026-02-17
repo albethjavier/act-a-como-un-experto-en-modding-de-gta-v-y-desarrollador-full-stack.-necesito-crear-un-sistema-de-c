@@ -1,4 +1,4 @@
-# 🎮 GTA V Remote Control System - PILLAR V7
+# 🎮 GTA V Remote Control System - PILLAR V8
 
 Sistema completo de control remoto para GTA V con integración para TikTok Live, Twitch y YouTube. Permite que los espectadores controlen el juego mediante regalos, comandos de chat y más.
 
@@ -14,6 +14,9 @@ Sistema completo de control remoto para GTA V con integración para TikTok Live,
 - 🎮 **Integración TikTok** automática con regalos
 - ⚡ **Rate limiting** anti-spam
 - 🛡️ **Manejo robusto de errores**
+- ⚙️ **Polling automático** - NO requiere presionar F9
+- 📢 **Notificaciones visuales** en pantalla
+- 🔫 **100+ armas** con sistema mejorado
 
 ## 📋 Requisitos
 
@@ -79,18 +82,30 @@ npm install
 
 2. **Abrir GTA V** (modo historia)
 
-3. **Verificar que el script esté cargado**:
-   - Presiona `Insert` en el juego
-   - Deberías ver `escucha_dashboard.py` en la lista
+3. **Cargar el script en GTA V**:
+   - Presiona `F4` para abrir la consola de ScriptHookVDotNet
+   - Escribe: `load escucha_dashboard`
+   - Presiona Enter
+   - Deberías ver: `[INFO] Script 'escucha_dashboard' loaded successfully`
 
 4. **Abrir el dashboard**:
    ```
    http://localhost:3000
    ```
 
-5. **¡Probar!** Haz clic en cualquier botón
+5. **¡Probar!** Haz clic en cualquier botón y verás el efecto en 1-2 segundos
+
+> **⚠️ IMPORTANTE V8**: Ya NO necesitas presionar F9 ni ninguna tecla. El sistema es completamente automático.
 
 ## 📚 Documentación
+
+### 🆕 Novedades V8
+
+- 🚀 [Cambios y Mejoras V8](CAMBIOS_V8.md) - **¡LEE ESTO PRIMERO!**
+  - Sistema automático (sin F9)
+  - Modo Dios mejorado
+  - 100+ armas
+  - Notificaciones visuales
 
 ### Guías de Inicio
 
