@@ -426,7 +426,7 @@ app.get('/', (req, res) => {
     <div class="toast" id="toast"></div>
     
     <script>
-        const secciones = JSON.parse("${JSON.stringify(secciones).replace(/"/g, '\\"').replace(/\\n/g, '\\n')}");
+        const secciones = JSON.parse(atob("${Buffer.from(JSON.stringify(secciones)).toString('base64')}"));
         
         function showToast(message) {
             const toast = document.getElementById('toast');
