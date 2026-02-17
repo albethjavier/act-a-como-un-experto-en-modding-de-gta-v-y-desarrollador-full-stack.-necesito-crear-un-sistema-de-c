@@ -4,8 +4,8 @@
     "host": "0.0.0.0"
   },
   "paths": {
-    "commandFile": "./comando_gta.json",
-    "queueFile": "./cola_espera.json"
+    "commandFile": "H:\\Games\\Grand Theft Auto V\\comando_gta.json",
+    "queueFile": "H:\\Games\\Grand Theft Auto V\\cola_espera.json"
   },
   "security": {
     "rateLimitMs": 500,
@@ -17,5 +17,10 @@
     "autoCleanup": true,
     "fadeEffects": true,
     "debugMode": true
+  },
+  "notes": {
+    "commandFile": "Ruta absoluta al archivo de comando que lee el script de Python",
+    "queueFile": "Ruta absoluta al archivo de cola de prioridad",
+    "debugMode": "Muestra logs detallados en la consola"
   }
 }
